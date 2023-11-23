@@ -3,7 +3,7 @@ function vyhral(hrac) {
 	var deska = document.querySelector('#deska'),
 		radky = document.querySelectorAll("#deska tr").length,
 		sloupce = document.querySelectorAll("#deska tr:first-child > td").length,
-		vyhra = 3; // pocet potrebny na vyhru
+		vyhra = 5; // pocet potrebny na vyhru
 	var sousedi = [
 		[0, 1], // vpravo
 		[1, 1], // vpravo dolu
@@ -45,3 +45,4 @@ function vyhral(hrac) {
 	// nevyhral
 	return false;
 }
+

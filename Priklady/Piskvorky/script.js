@@ -41,3 +41,38 @@ vedle sebe stačí pro výhru. Standardně je nastaveno 3.
 */
 
 // tady je místo pro tvůj program
+
+const tabulka = document.getElementById("deska");
+const natahuElement = document.getElementById("natahu");
+let aktualniHrac = "X"; 
+
+const zmenHrace = () => {
+    if (aktualniHrac === "X") {
+        aktualniHrac = "O";
+    } else {
+        aktualniHrac = "X";
+    }
+    natahuElement.innerText = aktualniHrac;
+};
+
+const hracVyhral = () => {
+    return vyhral(aktualniHrac, tabulka);
+};
+
+tabulka.addEventListener("click", (event) => {
+    const cilovaBunka = event.target;
+    if (cilovaBunka.tagName.toLowerCase() === 'td' && !cilovaBunka.innerText) {
+        cilovaBunka.innerText = aktualniHrac;
+
+        if (hracVyhral()) {
+            const vyhraHlaska = document.createElement("p");
+            vyhraHlaska.innerText = `Hráč ${aktualniHrac} vyhrál!`;
+            document.body.appendChild(vyhraHlaska);
+            // Zde můžete přidat další akce, pokud hráč vyhrál
+        } else {
+            zmenHrace();
+        }
+    }
+});
+
+

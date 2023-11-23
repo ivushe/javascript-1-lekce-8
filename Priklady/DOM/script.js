@@ -35,5 +35,13 @@ Nápověda:
   Třídy můžeš z elementu i odebrat pomocí metody remove nebo přepínat třídu metodou toggle.
 */
 
-// tady je místo pro tvůj program
-
+// // tady je místo pro tvůj program
+// //1
+// const nadpis = document.querySelector("#nadpis");
+// const zmenenyNadpis = "Zmena nadpisu";
+// nadpis.textContent = zmenenyNadpis;
+// document.body.innerHTML = zmenenyNadpis;
+// //2
+// nadpis.style.color = "blue"
+// //3
+// nadpis.style.fontsize = "200px"

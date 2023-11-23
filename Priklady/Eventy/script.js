@@ -24,3 +24,21 @@
 */
 
 // tady je místo pro tvůj program
+
+const ctverecek = document.querySelector(".ctverecek")
+const body = document.querySelector("body")
+const rotuj = () => {
+	//ctverecek.classList.add("otoc");
+	ctverecek.classList.toggle("otoc");
+}
+
+ctverecek.addEventListener("click",rotuj)
+
+body.addEventListener("keydown", (e) => {
+    console.log(e.key);
+
+    if (e.key === "Enter") {
+        // Přepněte třídu pro změnu barvy na červenou
+        ctverecek.classList.toggle("pozadi");
+    }
+});
